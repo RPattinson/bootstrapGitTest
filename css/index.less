@@ -1,0 +1,307 @@
+//主题颜色
+@mainColor: #cc9900;
+//文字灰
+@fontColor: #8c8c8c;
+//公共样式
+.btn-primary {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: @mainColor;
+    border-color: @mainColor;
+    transition: .3s;
+    &:hover {
+        background-color: #906e09;
+        border-color: #906e09;
+    }
+}
+
+.container-fluid {
+    max-width: 1390px;
+    padding: 0 50px;
+}
+
+@media (max-width:568px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+}
+
+h4 a,
+h3 {
+    margin-bottom: 20px;
+    color: @mainColor;
+}
+
+li {
+    list-style: none;
+}
+
+//导航区域
+#nav {
+    height: 100px;
+    font-size: 20px;
+    background-color: #f8f8f8;
+    .navbar-toggle {
+        margin-top: 33px;
+    }
+    .navbar-brand {
+        margin-top: 25px;
+    }
+    .navbar-collapse.in {
+        overflow: visible;
+    }
+    .navbar-nav {
+        height: 100px;
+        a {
+            color: #000;
+            border-radius: 5px;
+        }
+    }
+    .active a {
+        color: #fff;
+        background-color: @mainColor;
+    }
+}
+
+@media (min-width: 762px) {
+    .navbar-nav {
+        padding-top: 25px;
+        a {
+            margin-left: 15px;
+            transition: .3s;
+            &:hover {
+                background-color: @mainColor;
+            }
+        }
+    }
+}
+
+@media (max-width: 762px) {
+    .navbar-collapse {
+        position: absolute;
+        right: 15px;
+        min-width: 10%;
+        li {
+            margin-right: 15px;
+            padding: 0;
+            background-color: #fff;
+            &:last-child {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            a {
+                padding: 10px 35px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        a {
+            padding: 15px 45px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        a {
+            padding: 15px 25px;
+        }
+    }
+}
+
+//介绍区域
+#introduce {
+    .title {
+        margin: 50px 0;
+        h2 {
+            color: @mainColor;
+        }
+    }
+    .introduce-subhead {
+        margin: 0 auto;
+        padding: 0 40px;
+        max-width: 800px;
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
+        @media (max-width: 768px) {
+            padding: 0 0;
+        }
+    }
+    >div {
+        .thumbnail {
+            border: none;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .caption {
+                padding: 10px 0;
+                h3 {
+                    margin-bottom: 20px;
+                    color: @mainColor;
+                }
+                p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    line-height: 25px;
+                }
+            }
+            @media (max-width:768px) {
+                margin: 0 0;
+            }
+        }
+    }
+}
+
+@media (max-width:991.9px) {
+    .thumbnail {
+        margin: 0 50px 50px 50px;
+    }
+}
+
+//主体内容区域
+#main {
+    padding-top: 30px;
+    @media (max-width: 992px) {
+        padding: 0 100px;
+    }
+    @media (max-width:768px) {
+        padding: 0;
+    }
+    .caption {
+        img {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        p {
+            font-size: 18px;
+            line-height: 35px;
+            color: @fontColor;
+        }
+    }
+    //右侧样式
+    .new-title {
+        a {
+            display: block;
+            font-size: 18px;
+            line-height: 35px;
+        }
+    }
+    //列表
+    .right-list {
+        margin-top: 50px;
+        @media (min-width: 568px) {
+            .new {
+                //媒体查询
+                height: 100%;
+                display: flex;
+                align-items: center;
+                .left {
+                    img {
+                        max-width: 100%;
+                        @media (max-width: 768px) {
+                            width: 90%;
+                        }
+                    }
+                }
+                .right {
+                    margin-left: 20px;
+                    flex: 1;
+                    border-bottom: 1px solid #ccc;
+                    p {
+                        margin-bottom: 20px;
+                        line-height: 30px;
+                        font-size: 16px;
+                        color: @fontColor;
+                    }
+                }
+            }
+        }
+        .new {
+            margin-bottom: 50px;
+            .right {
+                border-bottom: 1px solid #ccc;
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+//页脚
+#footer {
+    margin-top: 50px;
+    background: url(../img/classic-pattern-bg.png);
+    >div {
+        padding-top: 30px;
+        @media (max-width: 568px) {
+            .row div {
+                width: 100%;
+            }
+        }
+        span {
+            display: block;
+            margin-bottom: 30px;
+        }
+        .block-1 p {
+            margin-right: 10px;
+            padding: 20px 20px;
+            line-height: 25px;
+            background-color: #DCDCDC;
+            strong {
+                display: block;
+                margin-top: 25px;
+            }
+        }
+        .block-2 {
+            margin-bottom: 50px;
+            li {
+                a {
+                    font-size: 14px;
+                    line-height: 35px;
+                    color: #cccc66;
+                    border-bottom: 1px solid #cccc66;
+                    transition: .3s;
+                    &:hover {
+                        text-decoration: none;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .block-3 {
+            p {
+                //              margin-right: 10px;
+                margin: 30px 0;
+                padding-bottom: 30px;
+                font-size: 16px;
+                line-height: 25px;
+                color: snow;
+                border-bottom: 1px solid @fontColor;
+            }
+        }
+        .block-4 {
+            p {
+                padding-top: 30px;
+                color: snow;
+                line-height: 25px;
+            }
+        }
+    }
+    .copy {
+        line-height: 35px;
+        a {
+            color: #ccc;
+        }
+        color: #ccc;
+    }
+}
